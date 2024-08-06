@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.example.customviewconstrain.CustomView
+        android:id="@+id/customview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:setTitle="LIGHT MODE"
+        app:setImageDrawable="@android:drawable/ic_lock_idle_alarm"
+        app:setSubTitle="6:12AM"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.example.customviewconstrain.CustomView
+        android:id="@+id/customview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customview1"
+        app:setImageDrawable="@android:drawable/ic_lock_idle_alarm"
+        app:setSubTitle="6:12PM"
+        app:setTitle="DARK" />
+</androidx.constraintlayout.widget.ConstraintLayout>
